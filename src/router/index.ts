@@ -9,7 +9,7 @@ const router = createRouter({
       component: import('@/module/landing/layouts/LandingLayout.vue'),
       children: [
         {
-          path: '',
+          path: '/home',
           name: 'home',
           component: import('@/module/landing/pages/HomePage.vue'),
         },
