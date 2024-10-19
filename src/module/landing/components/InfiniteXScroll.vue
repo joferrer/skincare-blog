@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+//Si agregas uno nuevo, acuerdate de cambiar el calculo del tamaño y la animación en el style.
 const StoreLogo = {
   FARMATODO:
     'https://revistabusinessvenezuela.com/webv/wp-content/uploads/2021/04/LOGO-FARMATODO.jpg',
@@ -31,13 +32,12 @@ const logos = Object.values(StoreLogo)
   width: 300px;
   height: auto;
   overflow: hidden;
-  /* 6 elementos de 100px de ancho */
 }
 .scrolling-content .slide-track {
   display: flex;
   animation: scroll 10s linear infinite;
   -webkit-animation: scroll 10s linear infinite;
-  width: calc(70px * 8);
+  width: calc(70px * 8); /* 70(width logo) x (2 x cantidad de logos)  */
 }
 
 .scrolling-content .slide-track .store-div {
@@ -53,7 +53,9 @@ const logos = Object.values(StoreLogo)
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-70px * 4));
+    -webkit-transform: translateX(
+      calc(-70px * 4)
+    ); /* -(width logo) x (numero de logos) */
     transform: translateX(calc(-70px * 4));
   }
 }
