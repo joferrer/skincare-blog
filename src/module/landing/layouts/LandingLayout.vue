@@ -21,6 +21,3 @@
   @apply w-14 h-14;
 }
 </style>
-
-/** * .main-container { max-width: 1200px; height: 100vh; display: flex;
-flex-direction: column; justify-content: center; } */
