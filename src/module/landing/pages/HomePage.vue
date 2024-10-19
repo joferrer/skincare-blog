@@ -2,7 +2,7 @@
   <div class="flex flex-col text-gray max-w-5xl">
     <section class="mb-10 flex flex-col items-center mt-36">
       <div class="flex flex-col items-center max-w-lg space-y-4">
-        <h1 class="font-poppins text-[#0091EA] font-bold text-4xl">
+        <h1 class="font-poppins text-[#0091EA] font-bold text-5xl">
           Arma tu skincare 😱
         </h1>
         <h2 class="font-poppins text-[#4A4A4A] text-lg md:text-2xl text-center">
