@@ -1,12 +1,6 @@
 <template>
   <div>
-    <header>
-      <img
-        id="logo-header"
-        src="/public/SkincareProyect-logo.svg"
-        alt="arma tu skincare logo"
-      />
-    </header>
+    <header></header>
     <main>
       <div class="main-container">
         <RouterView />
