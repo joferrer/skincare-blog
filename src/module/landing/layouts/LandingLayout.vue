@@ -3,9 +3,7 @@
     <header></header>
     <main>
       <div>Probando conexion desde el layout</div>
-      <div class="main-container">
-        <RouterView />
-      </div>
+      <div class="main-container"></div>
     </main>
   </div>
 </template>
