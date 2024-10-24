@@ -17,12 +17,31 @@
     <section class="flex flex-col text-gray max-w-5xl px-2">
       <SearchInput />
     </section>
+
+    <section>
+      <ProductsGrid :products="products" />
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { getProducts as getProductsAPI } from '@/api/products.api'
 import InfiniteXScroll from '../components/InfiniteXScroll.vue'
 import SearchInput from '../components/SearchInput.vue'
+import { onMounted, ref } from 'vue'
+import type { Product } from '@/interfaces/product.interface'
+import ProductsGrid from '../components/ProductsGrid.vue'
+
+const products = ref<Product[]>([])
+
+const getProducts = async () => {
+  return await getProductsAPI()
+}
+console.log(products)
+onMounted(async () => {
+  const productsList = await getProducts()
+  products.value = productsList
+})
 </script>
 
 <style scoped>
